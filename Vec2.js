@@ -78,10 +78,11 @@ class Vec2{
 	{
 		return new Vec2(this.x-vec.x,this.y-vec.y);
 	}
-	rotateAround(vecPoint,rad) /*rotates vector around the given point by given radians and returns its new absolute position*/ 
+	rotatePointAround(vecPoint,rad) /*rotates vector point around this vector (point) by given radians and returns its new absolute position*/ 
 	{
-		var rotatedVec = this.rotate(rad);
-		return vecPoint.add(rotatedVec);
+		var rot_vec = this.vecTo(vecPoint);
+		var rotatedVec = rot_vec.rotate(rad);
+		return this.add(rotatedVec);
 	}
 	rotate(rad) /*rotates vector by radians*/
 	{
