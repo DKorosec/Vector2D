@@ -113,7 +113,7 @@ class Vec2{
 	{
 		return this.x*vec.x+this.y*vec.y;
 	}
-	dot(vec)
+	dot(vec) /*dot product with this*vec, actual scalar product*/
 	{
 		return this.scalar(vec);
 	}
