@@ -33,7 +33,7 @@ class Vec2{
 	}
 	equalErr(vec,sigma=0.001) /*check if two vectors are almost equal (use sigma to set the error threshold)*/
 	{
-		return Math.abs(this.x-vec.x) < sigma && Math.abs(this.y-vec.y);
+		return Math.abs(this.x-vec.x) < sigma && Math.abs(this.y-vec.y) < sigma;
 	}
 	norm() /*normalized vector with length of 1 */
 	{
