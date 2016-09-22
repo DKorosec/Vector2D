@@ -95,15 +95,15 @@ class Vec2{
 	}
 	angle(vec) /* returns cosine angle [0-PI] between this and vec */
 	{
-		return Math.cos(this.scalar(vec)/(this.len()*vec.len())); 
+		return Math.acos(this.scalar(vec)/(this.len()*vec.len())); 
 	}
 	fullAngle(vec) /* returns full angle [0-2PI) between this and vec */
 	{
-		var angle = Math.atan2(this.y,this.x) - Math.atan(vec.y,vec.x);
-		if(angle < 0)
-			angle+=(Math.PI*2);
-		
-		return angle;
+		return Math.atan2(this.det(vec),this.dot(vec));
+	}
+	det(vec) /* returns determinant of two vectors */
+	{
+		return this.cross(vec);
 	}
 	vecTo(vec) /* gets new vector from this to vec */
 	{
@@ -112,6 +112,10 @@ class Vec2{
 	scalar(vec) /* scalar product with this*vec */
 	{
 		return this.x*vec.x+this.y*vec.y;
+	}
+	dot(vec)
+	{
+		return this.scalar(vec);
 	}
 	cross(vec) /* cross product with this x vec */
 	{
