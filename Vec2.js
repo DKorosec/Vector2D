@@ -1,4 +1,8 @@
 class Vec2{
+    static fromAngle(angle) /*returns a new constructed vector from given  angle (in radians)*/
+    {
+        return new Vec2(Math.cos(angle),Math.sin(angle));
+    }
 	constructor(x=0,y=0)
 	{
 		this.setPos(x,y);
