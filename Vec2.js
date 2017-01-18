@@ -130,8 +130,9 @@ class Vec2{
 	{
 		return new Vec2(-this.x,-this.y);
 	}
-	*[Symbol.iterator]() { /*used for unpacking ... if function takes x and y for argument you can unpack your vector easly with function(...vector,other,arguments);  ...vector will turn into x,y arguments! */ 
-        yield this.x;
+	*[Symbol.iterator]() /*used for unpacking ... if function takes x and y for argument you can unpack your vector easly with function(...vector,other,arguments);  ...vector will turn into x,y arguments! */ 
+	{
+		yield this.x;
 		yield this.y;
-    }
+	}
 }
