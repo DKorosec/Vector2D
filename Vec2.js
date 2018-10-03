@@ -54,7 +54,7 @@ class Vec2 {
   }
   distance(vec) /*distance between this and argument vector*/ {
     var dx = this.x - vec.x;
-    var dy = this.y - vec.y
+    var dy = this.y - vec.y;
     return Math.sqrt(dx * dx + dy * dy);
   }
   len() /*length of the vector */ {
